@@ -9,6 +9,12 @@ This is a proof-of-concept demonstrating how Great Expectations could be integra
 - **Good Data**: A CSV file with valid, properly formatted data that passes all validations
 - **Bad Data**: A CSV file with various data quality issues (invalid types, missing values, out-of-range values, etc.) that fails validations
 
+## Presentation
+
+For a comprehensive overview of Great Expectations, see the presentation:
+
+**[Great Expectations Presentation](https://docs.google.com/presentation/d/102JVevkjBim6QojXYgjJDDRNZWJAltfXc-g2ojisqo8/edit?usp=sharing)**
+
 ## What Gets Validated
 
 The expectation suite validates:
