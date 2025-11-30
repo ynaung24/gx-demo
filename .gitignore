@@ -1,7 +1,6 @@
 # Great Expectations generated files
 gx/
 .gx/
-gx_local/
 
 # Python
 __pycache__/

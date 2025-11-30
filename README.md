@@ -1,6 +1,78 @@
 # Great Expectations Data Validation Demo
 
-This demo showcases how Great Expectations (GX) would work if integrated into our project. It demonstrates data validation using local CSV files to test validation functions, showing both **passing** and **failing** validation scenarios.
+## Group Information
+
+**Group Members:**
+- Yan
+- Ajay
+- Peeyush
+
+## Tool Selected
+
+**Great Expectations (GX)** - A Python-based open-source library for validating, documenting, and profiling data to maintain quality and improve communication between teams.
+
+## Problem Statement
+
+Data quality issues in data pipelines can lead to incorrect analytics, poor business decisions, and downstream failures. Without automated data validation, data quality problems are often discovered too late—after data has been processed, transformed, and used in reports or models. This project implements automated data validation using Great Expectations to:
+
+1. **Detect data quality issues early** - Validate data before it enters downstream systems
+2. **Ensure data consistency** - Verify data types, ranges, formats, and completeness
+3. **Document data quality** - Generate comprehensive reports showing what data quality checks passed or failed
+4. **Enable proactive monitoring** - Provide visibility into data quality through automated validation checks
+
+The implementation demonstrates validation of NBA player statistics data, showing both **passing** and **failing** validation scenarios to illustrate how the tool catches various data quality issues including invalid types, missing values, out-of-range values, and format violations.
+
+## How Great Expectations Fits into DataOps
+
+Great Expectations integrates into DataOps practices by providing:
+
+1. **Automated Data Quality Checks**: Validates data at each stage of the pipeline (ingestion, transformation, loading) to catch issues early
+2. **Continuous Validation**: Can be integrated into CI/CD pipelines to validate data as part of automated workflows
+3. **Data Quality Documentation**: Automatically generates HTML data docs that serve as living documentation of data quality expectations and results
+4. **Collaboration**: Enables both technical and non-technical team members to define and review data quality rules through code or UI
+5. **Monitoring & Alerting**: Provides validation results that can trigger alerts when data quality thresholds are breached
+6. **Testing Framework**: Acts as a testing framework for data, similar to unit tests for code, ensuring data meets expected quality standards before being used in downstream processes
+
+In a production DataOps pipeline, Great Expectations would:
+- Run validations after data ingestion from sources (GCS, S3, databases)
+- Validate data after transformations to ensure ETL processes maintain data quality
+- Generate data quality reports accessible to stakeholders
+- Trigger alerts or block pipeline stages when validations fail
+- Maintain a historical record of data quality over time
+
+## Evidence of Correctness
+
+The following files and outputs demonstrate the successful implementation and execution of Great Expectations:
+
+1. **Validation Script**: See `validate_gcs_data.py` for the complete implementation of data validation logic
+   - Creates expectation suite with 20+ validation rules
+   - Validates both good and bad data samples
+   - Generates validation results and data docs
+
+2. **Expectation Suite Definition**: See `gx_local/expectations/nba_player_stats_suite.json` for the complete set of data quality expectations defined
+
+3. **Great Expectations Configuration**: See `gx_local/great_expectations.yml` for the GX context configuration
+
+4. **Sample Data Files**: 
+   - See `sample_data/good_data.csv` for valid data that passes all validations
+   - See `sample_data/bad_data.csv` for invalid data that demonstrates failing validations
+
+5. **Validation Results (Data Docs)**: See `gx_local/uncommitted/data_docs/local_site/index.html` for HTML documentation showing:
+   - All expectations defined
+   - Validation results for each data batch
+   - Pass/fail status for each expectation
+   - Detailed statistics and visualizations
+
+6. **Great Expectations UI Screenshots**: 
+   - See `screenshots/passing_without_test_col.png` for GX UI showing passing validations without test column
+   - See `screenshots/test_col.png` for GX UI demonstrating test column functionality
+
+7. **Dependencies**: See `requirements.txt` for all required Python packages
+
+8. **To Verify Execution**: Run `python validate_gcs_data.py` to see:
+   - Console output showing validation results
+   - Pass/fail counts for each data sample
+   - Generated data docs in `gx_local/uncommitted/data_docs/`
 
 ## Overview
 
@@ -156,10 +228,9 @@ The GX UI allows users to:
 
 ### Screenshots
 
-See the `screenshots/` directory for examples of the GX UI in action, demonstrating:
-- The expectation creation interface
-- Validation result dashboards
-- Data source connection options
+See the `screenshots/` directory for examples of the GX UI in action:
+- `screenshots/passing_without_test_col.png` - Shows passing validations without test column
+- `screenshots/test_col.png` - Demonstrates test column functionality in the GX UI
 
 ### Integration Potential
 
