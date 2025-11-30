@@ -1,0 +1,12 @@
+player_id,player_name,team,points,assists,rebounds,game_date,minutes_played
+201,LeBron James,Lakers,28,8,7,2024-01-15,38
+202,Stephen Curry,Warriors,invalid,6,4,2024-01-15,35
+203,Kevin Durant,Suns,26,5,8,invalid-date,36
+204,Jayson Tatum,Celtics,30,4,9,2024-01-15,999
+205,Luka Doncic,Mavericks,35,10,8,2024-01-15,40
+206,,76ers,29,3,11,2024-01-15,34
+207,Giannis Antetokounmpo,Bucks,27,6,12,2024-01-15,-5
+208,Devin Booker,Suns,abc,7,5,2024-01-15,32
+209,Jaylen Brown,Celtics,22,5,6,2024-01-15,31
+210,Anthony Davis,Lakers,25,2,13,2024-01-15,36
+

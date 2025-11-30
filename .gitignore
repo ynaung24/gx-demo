@@ -1,0 +1,29 @@
+# Great Expectations generated files
+gx/
+.gx/
+gx_local/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables and credentials
+.env
+*.json
+!package.json
+!tsconfig.json
+
